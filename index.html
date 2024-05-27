@@ -10,18 +10,22 @@
     <title>Document</title>
 
 </head>
-<body>
+<body class="bg-[#17202A]">
     
     <div class="h-[400px] w-screen h-screen flex justify-center items-center">
-        <div class="rounded-[20px] bg-[#566573] w-[800px] h-[500px] shadow-xl shadow-gray-600 flex items-center flex-col">
-            <input class="focus:outline-none rounded-[5px] h-[30px] w-[250px] mt-[20px] border-white border-solid p-[10px] box-border" type="text" placeholder="Enter your task!">
-            <button class="addTaskBtn w-[250px] bg-white mt-[10px] rounded-[5px] hover:bg-[#566573] transtion duration-200">
+        <div class="rounded-[20px] bg-[#566573] w-[800px] h-[500px] shadow-lg shadow-gray-600 flex items-center flex-col">
+        <div>
+            <form class="flex items-center flex-col">
+                <input class="focus:outline-none rounded-[5px] h-[50px] w-[350px] mt-[20px] border-white border-solid p-[10px] box-border" type="text" placeholder="Enter your task!">
+                <button class="addTaskBtn w-[350px] bg-[#D7DBDD] mt-[10px] rounded-[5px] hover:bg-[#566573] transtion duration-200">           
                 <i class="fa-solid fa-plus"></i>
-            </button>
+                </button>
+            </form>
+
+        </div>
                 <ul class="myListArea mt-[20px] flex gap-[5px] flex-col">
 
                 </ul>
-            
         </div>
     </div>
 </body>

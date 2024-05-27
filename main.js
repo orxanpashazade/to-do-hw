@@ -9,7 +9,7 @@ function addTask(e){
         alert("Task`in adini daxil et!")
     }else{
     let taskArea = document.createElement("li")
-    taskArea.classList.add("flex","justify-between", "p-[10px]", "w-[300px]", "h-[50px]", "bg-[#2980B9]","rounded-[10px]")
+    taskArea.classList.add("flex","justify-between","items-center", "p-[10px]", "w-[400px]", "h-[50px]", "bg-[#F2F4F4]","rounded-[10px]","shadow-xl", "shadow-gray-600")
 
     let textContainer = document.createElement("div")
     let taskContent = document.createElement("p")
@@ -19,14 +19,15 @@ function addTask(e){
     taskContent.innerText = inputData.value
     inputData.value =''
     let iconsContainer = document.createElement("div")
-    iconsContainer.classList.add("flex","gap-[5px]")
+    iconsContainer.classList.add("flex","gap-[10px]","items-center")
     taskArea.appendChild(iconsContainer)
 
     let editTask = document.createElement("i")
-    editTask.classList.add("text-[20px]")
+    editTask.classList.add("text-[25px]","hover:cursor-pointer")
     taskArea.appendChild(editTask)
 
     let deleteTask = document.createElement("i")
+    deleteTask.classList.add("text-[25px]","hover:cursor-pointer")
     taskArea.appendChild(deleteTask)
 
     iconsContainer.appendChild(editTask)
@@ -39,10 +40,10 @@ function addTask(e){
     ListArea.appendChild(taskArea)
 
     deleteTask.addEventListener("click",deleteTaskFunc)
-function deleteTaskFunc(e){
-   if(e.target.closest(".fa-trash")){
-    let AllList = e.target.closest(".myListArea")
-    AllList.remove()
+    function deleteTaskFunc(e){
+        if(e.target.closest(".fa-trash")){
+            let AllList = e.target.closest(".myListArea")
+            AllList.remove()
    }
 }
 editTask.addEventListener("click", editTaskFunc)
